@@ -1,0 +1,11 @@
+@import './Data/variables.scss';
+
+*{
+    font: $font;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: $fontSize;
+}
