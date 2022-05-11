@@ -1,4 +1,5 @@
 import React from "react";
+
 import styled from "styled-components";
 
 const header = styled.div`
@@ -25,3 +26,14 @@ const sectionHeader = () =>{
 }
 
 export default sectionHeader;
+
+import styledComponents from "styled-components";
+
+const header = styled.div`
+    
+`;
+
+const sectionHeader = () =>{
+    
+}
+
