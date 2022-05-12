@@ -1,8 +1,7 @@
-import React from "react";
 
 import styled from "styled-components";
 
-const header = styled.div`
+const Header = styled.div`
     width:100%;
 
 `;
@@ -12,28 +11,19 @@ const Caption = styled.div`
 `;
 
 const Banner = styled.div`
-    height:3rem
+    height:3rem;
 `;
 
-const sectionHeader = () =>{
+const SectionHeader = () =>{
 
     return(
-        <header>
+        <Header>
             <Caption></Caption>
             <Banner></Banner>
-        </header>
+        </Header>
     )
 }
 
-export default sectionHeader;
+export default SectionHeader;
 
-import styledComponents from "styled-components";
-
-const header = styled.div`
-    
-`;
-
-const sectionHeader = () =>{
-    
-}
 

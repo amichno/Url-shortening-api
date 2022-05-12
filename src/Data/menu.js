@@ -1,1 +1,1 @@
-export const menu =['Features', 'Pricing', 'Resources', 'Login', 'Sign Up']
+export const menu =['Features', 'Pricing', 'Resources']
