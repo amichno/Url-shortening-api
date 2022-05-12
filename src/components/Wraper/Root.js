@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SectionHeader from '../Header/sectionHeader';
 import Menu from "../Menu/menu";
-import Header from '../Header/sectionHeader';
+import { caption } from "../../Data/caption";
 
 const Wraper = styled.div`
     width: 100vw;
@@ -34,7 +34,7 @@ class Root extends React.Component{
         return(
             <Wraper>
                 <Menu />
-                <SectionHeader />
+                <SectionHeader caption={caption} />
             </Wraper>
         )
     }
