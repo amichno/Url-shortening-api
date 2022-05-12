@@ -10,9 +10,7 @@ const Wraper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin: 1rem 1rem;
     @media (max-width: 375px ){
         width: 100vw;
         height: 100%;
@@ -24,6 +22,9 @@ const Wraper = styled.div`
     @media (min-width: 992px) and (max-width: 1440px) {
         width: 1440px;
         height: 100%;
+        margin: 1rem auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 `;
 
