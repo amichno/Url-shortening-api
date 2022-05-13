@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { caption } from "../../Data/caption";
 
 const Header = styled.div`
     width:100%;
@@ -7,28 +6,29 @@ const Header = styled.div`
     height: 482px;
     display: flex;
     padding-top: 2rem;
-
+    align-items: center;
 `;
 
 const HeaderText = styled.div`
-    
     flex:1;
     width: 50%;
     height: 100%;
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 const Caption = styled.p`
-    font-size: 3rem;
+    font-size: 6vw;
     font-weight: 700;
-    //padding-top: 10%;
     width:100%;
-    max-height: 30%;
-    min-height: 12rem;
+    max-height: 20vw;
+    min-height: 6vw;
 `;
 
 const Text = styled.p`
-    font-size: 1rem;
+    font-size: 1.5vw;
     height: 5rem;
     width: 100%;
     padding-right: 3rem;
@@ -37,10 +37,15 @@ const Text = styled.p`
 `;
 
 const GetStartedButton = styled.button`
-
-    width:6rem;
+    width:7rem;
     height: 2rem;
     border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    font-weight: 700;
 `;
 
 const Banner = styled.div`
@@ -52,14 +57,13 @@ const Banner = styled.div`
 `;
 
 const SectionHeader = (props) =>{
-    const caption=props.caption;
+    const caption=props.caption[0];
     return(
         <Header>
             <HeaderText>
-                <Caption>{caption[0].caption}</Caption>
-                <Text>{caption[0].text}</Text>
-                <GetStartedButton>{caption[0].banner}</GetStartedButton>
-                {console.log(props)}
+                <Caption>{caption.caption}</Caption>
+                <Text>{caption.text}</Text>
+                <GetStartedButton>{caption.banner}</GetStartedButton>
             </HeaderText>
             <Banner></Banner>
         </Header>
