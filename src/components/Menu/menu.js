@@ -37,9 +37,9 @@ const Login = styled.div`
 
 const SignIn = styled.div`
     width: 5rem;  
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
     background-color: hsl(180, 66%, 49%);
     text-align: center;
     color: white;
