@@ -7,6 +7,18 @@ const Header = styled.div`
     display: flex;
     padding-top: 2rem;
     align-items: center;
+    @media (max-width: 376px ){
+        display: flex;
+        flex-direction: column-reverse;
+        //flex-wrap: wrap;
+    }
+    @media (min-width: 376px) and (max-width: 992px){
+        flex-direction: column-reverse;
+       
+    }
+    @media (min-width: 992px) and (max-width: 1440px) {
+        
+    }
 `;
 
 const HeaderText = styled.div`
@@ -17,6 +29,9 @@ const HeaderText = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: 376px ){
+        width: 100%;
+    }
 `;
 
 const Caption = styled.p`
@@ -54,6 +69,10 @@ const Banner = styled.div`
     max-height: 100%;
     height: 100%;
     background-image: url('../../images/illustration-working.svg');
+    @media (max-width: 375px ){
+        width: 100%;
+       // flex:0;
+    }
 `;
 
 const SectionHeader = (props) =>{
