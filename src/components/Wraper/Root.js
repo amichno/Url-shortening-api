@@ -7,6 +7,7 @@ import SectionUrl from "../SectionUrl/SectionUrl";
 
 const Wraper = styled.div`
     width: 100vw;
+    max-width: 1440px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,10 +19,12 @@ const Wraper = styled.div`
     }
     @media (min-width: 375px) and (max-width: 992px){
         width: 100vw;
+        max-width: 1440px;
         height: 100%;
     }
     @media (min-width: 992px) and (max-width: 1440px) {
-        width: 1440px;
+        width: 100vw;
+        max-width: 1440px;
         height: 100%;
         margin: 1rem auto;
         padding-left: 1rem;
