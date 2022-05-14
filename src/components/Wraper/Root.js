@@ -3,6 +3,7 @@ import styled from "styled-components";
 import SectionHeader from '../Header/sectionHeader';
 import Menu from "../Menu/menu";
 import { caption } from "../../Data/caption";
+import SectionUrl from "../SectionUrl/SectionUrl";
 
 const Wraper = styled.div`
     width: 100vw;
@@ -35,6 +36,7 @@ class Root extends React.Component{
             <Wraper>
                 <Menu />
                 <SectionHeader caption={caption} />
+                <SectionUrl />
             </Wraper>
         )
     }
