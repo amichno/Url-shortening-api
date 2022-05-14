@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const Header = styled.div`
     width:100%;
-    max-height: 482px;
-    height: 482px;
+    //max-height: 482px;
+    height: 522px;
     display: flex;
     padding-top: 2rem;
     align-items: center;
@@ -69,9 +69,9 @@ const Banner = styled.div`
     max-height: 100%;
     height: 100%;
     background-image: url('../../images/illustration-working.svg');
+    background-repeat: no-repeat;
     @media (max-width: 375px ){
         width: 100%;
-       // flex:0;
     }
 `;
 
