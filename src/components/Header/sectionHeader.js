@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {ReactComponent as HeaderIllustration} from '../../images/illustration-working.svg'
 
 const Header = styled.div`
     width:100%;
@@ -10,10 +11,12 @@ const Header = styled.div`
     @media (max-width: 376px ){
         display: flex;
         flex-direction: column-reverse;
-        //flex-wrap: wrap;
+        height: fit-content;
+        justify-content: center;
     }
     @media (min-width: 376px) and (max-width: 992px){
         flex-direction: column-reverse;
+        height: fit-content;
        
     }
     @media (min-width: 992px) and (max-width: 1440px) {
@@ -22,7 +25,7 @@ const Header = styled.div`
 `;
 
 const HeaderText = styled.div`
-    flex:1;
+    flex:1 1;
     width: 50%;
     height: 100%;
     font-size: 1rem;
@@ -61,17 +64,30 @@ const GetStartedButton = styled.button`
     background-color: hsl(180, 66%, 49%);
     color: white;
     font-weight: 700;
+    @media (min-width: 376px) and (max-width: 992px){ 
+       margin-bottom: 10%;
+    }
 `;
 
 const Banner = styled.div`
-    flex:1;
-    height:3rem;
+    flex:1 1;
+    //height:3rem;
     max-height: 100%;
     height: 100%;
-    background-image: url('../../images/illustration-working.svg');
-    background-repeat: no-repeat;
+    width:50%;
+    overflow: hidden;
     @media (max-width: 375px ){
-        width: 100%;
+        width: 100%;   
+        height:50%; 
+    }
+
+    @media (min-width: 376px) and (max-width: 992px){
+       flex-direction: column-reverse;
+       width:100%;
+       height:50%; 
+       margin-bottom: 10%;
+       //align-self: center;
+       //justify-self: center;
     }
 `;
 
@@ -84,7 +100,9 @@ const SectionHeader = (props) =>{
                 <Text>{caption.text}</Text>
                 <GetStartedButton>{caption.banner}</GetStartedButton>
             </HeaderText>
-            <Banner></Banner>
+            <Banner >
+                <HeaderIllustration />
+            </Banner>
         </Header>
     )
 }

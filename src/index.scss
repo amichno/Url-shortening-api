@@ -1,5 +1,6 @@
 @import './Data/variables.scss';
 
+
 *{
     font: $font;
     margin: 0;
@@ -11,4 +12,5 @@ html{
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
