@@ -33,7 +33,11 @@ const HeaderText = styled.div`
     flex-direction: column;
     justify-content: center;
     @media (max-width: 376px ){
+        width: 90%;
+    }
+    @media (min-width: 376px) and (max-width: 992px){
         width: 100%;
+       
     }
 `;
 
@@ -43,6 +47,10 @@ const Caption = styled.p`
     width:100%;
     max-height: 20vw;
     min-height: 6vw;
+    @media (min-width: 376px) and (max-width: 992px){
+       // transition:font-size 3rem;
+        
+    }
 `;
 
 const Text = styled.p`
@@ -52,6 +60,10 @@ const Text = styled.p`
     padding-right: 3rem;
     min-height: fit-content;
     color:hsl(257, 27%, 26%);
+    @media (min-width: 376px) and (max-width: 992px){
+        font-size: 2vw;
+        
+    }
 `;
 
 const GetStartedButton = styled.button`
@@ -66,6 +78,7 @@ const GetStartedButton = styled.button`
     font-weight: 700;
     @media (min-width: 376px) and (max-width: 992px){ 
        margin-bottom: 10%;
+
     }
 `;
 

@@ -8,6 +8,7 @@ const UrlWrapper = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    flex-wrap: wrap;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -26,6 +27,7 @@ const Input = styled.input`
     border-radius: 5px;
     font-weight: 700;
     color: hsl(257, 7%, 63%);
+    margin: 0.25rem auto;
     border: none;
     &:focus{
         outline: none;
@@ -41,7 +43,7 @@ const ButtonShorten = styled.button`
     background-color: hsl(180, 66%, 49%);
     color:white;
     border: none;
-    margin-left: 0.5rem;
+    margin: 0.25rem auto;
     font-weight: 700;
 `;
 
