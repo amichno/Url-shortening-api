@@ -18,8 +18,11 @@ const Logo = styled.div`
     width:121px;
     height: 33px;
     background-image: url('../../images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
     margin-top: auto;
     margin-bottom: auto;
+    padding-left: 1rem;
 `;
 
 const SectionMenu = styled.div`
