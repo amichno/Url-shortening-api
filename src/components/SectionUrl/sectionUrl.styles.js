@@ -1,7 +1,6 @@
-<<<<<<< Updated upstream
 import styled from "styled-components";
 
-const UrlWrapper = styled.div`
+export const UrlWrapper = styled.div`
     width:80%;
     height: 7rem;
     background-color: hsl(255, 11%, 22%);
@@ -9,6 +8,7 @@ const UrlWrapper = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    flex-wrap: wrap;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -18,7 +18,7 @@ const UrlWrapper = styled.div`
     z-index: 5;
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
     height: 3rem;
     width: 60%;
     padding-left: 0.5rem;
@@ -27,13 +27,14 @@ const Input = styled.input`
     border-radius: 5px;
     font-weight: 700;
     color: hsl(257, 7%, 63%);
+    margin: 0.25rem auto;
     border: none;
     &:focus{
         outline: none;
     }
 `;
 
-const ButtonShorten = styled.button`
+export const ButtonShorten = styled.button`
     width: 10rem;
     height: 3rem;
     -webkit-border-radius: 5px;
@@ -42,20 +43,6 @@ const ButtonShorten = styled.button`
     background-color: hsl(180, 66%, 49%);
     color:white;
     border: none;
-    margin-left: 0.5rem;
+    margin: 0.25rem auto;
     font-weight: 700;
 `;
-=======
-import { UrlWrapper, Input, ButtonShorten } from "./sectionUrl.styles";
->>>>>>> Stashed changes
-
-const SectionUrl = ()=>{
-    return(
-        <UrlWrapper>
-            <Input type="text" placeholder="Shorten a link here..."></Input>
-            <ButtonShorten>Shorten It!</ButtonShorten>
-        </UrlWrapper>
-    )
-}
-
-export default SectionUrl;
