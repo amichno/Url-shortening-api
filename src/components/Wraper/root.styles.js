@@ -12,13 +12,13 @@ export const Wraper = styled.div`
         height: 100%;
     }
     @media (min-width: 375px) and (max-width: 992px){
-        width: 90vw;
+        width: 98vw;
         height: 100%;
         padding-left: 2rem;
         padding-right: 2rem;
     }
     @media (min-width: 992px) and (max-width: 1440px) {
-        width: 90vw;
+        width: 98vw;
         height: 100%;
         padding-left: 2rem;
         padding-right: 2rem;
