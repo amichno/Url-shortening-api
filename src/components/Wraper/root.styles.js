@@ -1,7 +1,9 @@
 import styled from "styled-components";
-/* autoprefixer grid: autoplace */
 
-export const Wraper = styled.div`
+
+
+export const Wraper = styled.div`   
+
     width: 100vw;
     height: 100%;
     display: flex;
@@ -19,6 +21,7 @@ export const Wraper = styled.div`
     }
     @media (min-width: 992px) and (max-width: 1440px) {
         width: 98vw;
+
         height: 100%;
         padding-left: 2rem;
         padding-right: 2rem;

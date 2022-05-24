@@ -46,3 +46,4 @@ export const ButtonShorten = styled.button`
     margin: 0.25rem auto;
     font-weight: 700;
 `;
+

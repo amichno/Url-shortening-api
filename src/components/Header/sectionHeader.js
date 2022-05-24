@@ -1,5 +1,8 @@
 import {ReactComponent as HeaderIllustration} from '../../images/illustration-working.svg'
-import { Header, HeaderText, Caption, Text, GetStartedButton, Banner } from './sectionHeader.styles';
+
+
+import { Header, HeaderText, Caption, Text, Banner, GetStartedButton } from './sectionHeader.styles';
+
 
 const SectionHeader = (props) =>{
     const caption=props.caption[0];

@@ -45,4 +45,6 @@ export const SignIn = styled.div`
     text-align: center;
     color: white;
     padding: 0.5rem 0.5rem;
+
 `;
+
