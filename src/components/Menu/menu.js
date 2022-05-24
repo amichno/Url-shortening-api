@@ -1,5 +1,6 @@
 import { menu } from "../../Data/menu";
-import {SectionMenu, Logo, MenuList, MenuItem, Login, SignIn} from "./menu.styles";
+import {SectionMenu, Logo, MenuList, MenuItem, Login, SignIn} from "./menu.styles"
+
 
 const Menu = () =>{
 

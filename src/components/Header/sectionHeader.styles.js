@@ -7,6 +7,7 @@ export const Header = styled.div`
     display: flex;
     padding-top: 2rem;
     align-items: center;
+
     @media (max-width: 376px ){
         display: flex;
         flex-direction: column-reverse;
@@ -15,16 +16,12 @@ export const Header = styled.div`
     }
     @media (min-width: 376px) and (max-width: 992px){
         flex-direction: column-reverse;
-        height: fit-content;
-       
-    }
-    @media (min-width: 992px) and (max-width: 1440px) {
-        
+
     }
 `;
 
 export const HeaderText = styled.div`
-    flex:1 1;
+
     width: 50%;
     height: 100%;
     font-size: 1rem;
@@ -78,7 +75,6 @@ export const GetStartedButton = styled.button`
 `;
 
 export const Banner = styled.div`
-    flex:1 1;
     max-height: 100%;
     height: 100%;
     width:50%;
@@ -94,4 +90,4 @@ export const Banner = styled.div`
        height:50%; 
        margin-bottom: 10%;
     }
-`;
+
