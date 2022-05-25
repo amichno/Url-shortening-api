@@ -90,4 +90,5 @@ export const Banner = styled.div`
        height:50%; 
        margin-bottom: 10%;
     }
+`;
 
