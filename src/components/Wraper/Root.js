@@ -6,11 +6,11 @@ import SectionDescription from "../SectionDescription/sectionDescription";
 import { caption } from "../../Data/caption";
 import { description } from "../../Data/description";
 import { Wraper } from "./root.styles";
+import SectionAdvantages from "../SectionAdvantages/sectionAdvantages.component";
 
 
 
 class Root extends React.Component{
-
     render(){
         return(
             <Wraper>
@@ -18,6 +18,7 @@ class Root extends React.Component{
                 <SectionHeader caption={caption}/>
                 <SectionUrl />
                 <SectionDescription description={description}/>   
+                <SectionAdvantages />
             </Wraper>
         )
     }
