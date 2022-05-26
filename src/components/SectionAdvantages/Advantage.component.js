@@ -4,25 +4,20 @@ import { Adv } from "./sectionAdvantages.styles";
 const Advantage = (props)=>{
     const advList = props.advantages;
     return(
-        <Adv>
-            {advList.map(({title, text, url}) =>
-            
-             <Fragment>
-                 {console.log("w petli")}
-                <div>
-                    <img src={url} />
+        <Fragment>
+            {advList.map(({title, text, url}) =>         
+             <Adv>
+                <div className="Icon">
+                    <img src={url} alt={title}/>
                 </div>
-                <div>
+                <div className="TextAdv">
                     <h1>{title}</h1>
                     <p>{text}</p>
-
                 </div>
-                {console.log(title)}
-             </Fragment>
-
+             </Adv>
             )}
-
-        </Adv>
+            </Fragment>
+        
     )
 
 }
