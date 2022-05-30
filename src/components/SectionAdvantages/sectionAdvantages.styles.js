@@ -8,16 +8,19 @@ export const AdvantagesSection = styled.div`
     justify-content: center;
     padding-top: 2rem;
     background-color: hsla(0, 0%, 75%, 0.5);
+    flex-wrap: wrap;
 `;
 
 export const Adv = styled.div`
     flex: 1;
     margin: 1rem 1rem;
-    height:350px;
+    max-height:400px;
     max-width: 400px;
     background-color: white;
     position: relative;
-    max-height: fit-content;
+    //min-height: fit-content;
+    
+    
     .Icon{
         background-color: hsl(255, 11%, 22%) ;
         z-index: 5;
@@ -37,9 +40,11 @@ export const Adv = styled.div`
     }
     .TextAdv{
         padding: 2rem 2rem;
+        overflow: auto;
     }
     
     p{
         padding-top: 2rem;
+        overflow: auto;
     }
 `;
