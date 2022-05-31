@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 export const Header = styled.div`
     width:100%;
-    height: 522px;
+    min-height: 522px;
     display: flex;
     padding-top: 2rem;
     align-items: center;
-
-    @media (max-width: 376px ){
+    flex-wrap: wrap-reverse;
+    max-height: fit-content;
+   /* @media (max-width: 376px ){
         display: flex;
         flex-direction: column-reverse;
         height: fit-content;
@@ -17,7 +18,7 @@ export const Header = styled.div`
     @media (min-width: 376px) and (max-width: 992px){
         flex-direction: column-reverse;
 
-    }
+    }*/
 `;
 
 export const HeaderText = styled.div`
