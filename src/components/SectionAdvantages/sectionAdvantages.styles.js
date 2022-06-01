@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const AdvantagesSection = styled.div`
     width:100%;
-    height:500px;
+    min-height:500px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-top: 2rem;
     background-color: hsla(0, 0%, 75%, 0.5);
     flex-wrap: wrap;
+    max-height: fit-content;
 `;
 
 export const Adv = styled.div`
@@ -18,7 +19,7 @@ export const Adv = styled.div`
     max-width: 400px;
     background-color: white;
     position: relative;
-    //min-height: fit-content;
+    max-height: fit-content;
     
     
     .Icon{
