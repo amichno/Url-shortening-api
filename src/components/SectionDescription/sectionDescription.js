@@ -6,7 +6,7 @@ const SectionDescription = (props) => {
 
     return(
         <SectionDes>
-            <Title>{descr.caption} </Title>
+            <Title isWhite={false}>{descr.caption} </Title>
             <Desc>{descr.text}</Desc>
         </SectionDes>
     )
