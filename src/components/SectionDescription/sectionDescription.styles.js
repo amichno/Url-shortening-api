@@ -16,7 +16,7 @@ export const Title = styled.div`
     font-size: 2rem;
     font-weight: 700;
     height: fit-content;
-    color: ${props => props.isWhite? "white": "black"}
+    color: ${props => props.isWhite? "hsl(0,0%,100%)": "hsl(100%, 0, 0)"}
 `;
 
 export const Desc = styled.div`

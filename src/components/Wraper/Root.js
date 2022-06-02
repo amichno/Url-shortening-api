@@ -22,6 +22,7 @@ class Root extends React.Component{
                 <SectionDescription description={description}/>   
                 <SectionAdvantages />
                 <BoostLinks />
+                <Footer />
             </Wraper>
         )
     }
