@@ -9,6 +9,7 @@ export const Wraper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
     @media (max-width: 375px ){
         width: 100vw;
         height: 100%;

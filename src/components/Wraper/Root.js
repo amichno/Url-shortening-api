@@ -7,6 +7,8 @@ import { caption } from "../../Data/caption";
 import { description } from "../../Data/description";
 import { Wraper } from "./root.styles";
 import SectionAdvantages from "../SectionAdvantages/sectionAdvantages.component";
+import Footer from "../Footer/footer.component";
+import BoostLinks from "../BoostLinks/boostLinks.component";
 
 
 
@@ -19,6 +21,7 @@ class Root extends React.Component{
                 <SectionUrl />
                 <SectionDescription description={description}/>   
                 <SectionAdvantages />
+                <BoostLinks />
             </Wraper>
         )
     }
