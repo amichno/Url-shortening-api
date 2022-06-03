@@ -6,7 +6,7 @@ const Advantage = (props)=>{
     return(
         <Fragment>
             {advList.map(({title, text, url}) =>         
-             <Adv>
+             <Adv key={title}> 
                 <div className="Icon">
                     <img src={url} alt={title}/>
                 </div>
