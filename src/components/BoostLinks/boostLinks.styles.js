@@ -7,7 +7,6 @@ export const BoostLinksWraper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     padding: 4rem 2rem;
     background-image: url("../../images/bg-boost-desktop.svg");
     background-repeat: no-repeat;
