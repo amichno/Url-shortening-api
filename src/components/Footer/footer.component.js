@@ -36,10 +36,10 @@ const Footer = () =>{
                 </LinksList> 
             </LinksWraper> 
             <Social>
-                <LogoFacebook alt="logo Facebook"/>
-                <LogoTwitter alt = "logo Twitter"/>
-                <LogoPinterest alt ="Logo Pinterest" />
-                <LogoInstagram alt = "logo Instagram"/>
+                <LogoFacebook className="LightBlueOnHover" alt="logo Facebook"/>
+                <LogoTwitter  className="LightBlueOnHover" alt = "logo Twitter"/>
+                <LogoPinterest  className="LightBlueOnHover" alt ="Logo Pinterest" />
+                <LogoInstagram  className="LightBlueOnHover" alt = "logo Instagram"/>
             </Social>
         </FooterWraper>
     )

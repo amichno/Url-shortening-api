@@ -39,4 +39,9 @@ export const Social = styled.div`
     display: flex;
     justify-content: space-around;
     padding-right:10%;
+    .LightBlueOnHover{
+        fill:lightblue;
+        cursor: pointer;
+    }
 `;
+
