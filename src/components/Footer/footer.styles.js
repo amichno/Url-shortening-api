@@ -40,8 +40,24 @@ export const Social = styled.div`
     justify-content: space-around;
     padding-right:10%;
     .LightBlueOnHover{
-        fill:lightblue;
+        fill: #FFFFFF;
         cursor: pointer;
+        :hover{
+            fill: #00FFFF; 
+            color: red;
+        }
     }
+`;
+
+export const SMImages = styled.img`
+   width:24px;
+   height: 24px;
+   fill: #FFFFFF;
+   
+   :hover{
+        fill: #00FFFF;
+        cursor: pointer;
+        color: green;
+   }
 `;
 

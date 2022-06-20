@@ -1,9 +1,10 @@
-import { FooterWraper, LinksWraper, FooterLogo, LinksListItem, LinksList, Social } from "./footer.styles";
+import { FooterWraper, LinksWraper, FooterLogo, LinksListItem, LinksList, Social, SMImages } from "./footer.styles";
 import {ReactComponent as LogoShortly} from "../../images/logo.svg";
 import {ReactComponent as LogoFacebook} from "../../images/icon-facebook.svg";
-import {ReactComponent as LogoTwitter} from "../../images/icon-twitter.svg"
-import {ReactComponent as LogoPinterest} from "../../images/icon-pinterest.svg"
-import {ReactComponent as LogoInstagram} from "../../images/icon-instagram.svg"
+import {ReactComponent as LogoTwitter} from "../../images/icon-twitter.svg";
+import {ReactComponent as LogoPinterest} from "../../images/icon-pinterest.svg";
+import {ReactComponent as LogoInstagram} from "../../images/icon-instagram.svg";
+import TwitterPath from "../../images/icon-twitter.svg";
 
 const Footer = () =>{
     return(
@@ -36,10 +37,10 @@ const Footer = () =>{
                 </LinksList> 
             </LinksWraper> 
             <Social>
-                <LogoFacebook className="LightBlueOnHover" alt="logo Facebook"/>
-                <LogoTwitter  className="LightBlueOnHover" alt = "logo Twitter"/>
-                <LogoPinterest  className="LightBlueOnHover" alt ="Logo Pinterest" />
-                <LogoInstagram  className="LightBlueOnHover" alt = "logo Instagram"/>
+                <LogoFacebook   alt="logo Facebook"/>
+                <SMImages fill="#FFFFFF" src={TwitterPath}></SMImages>
+                <LogoPinterest   className="LightBlueOnHover" alt ="Logo Pinterest" />
+                <LogoInstagram   className="LightBlueOnHover" alt = "logo Instagram"/>
             </Social>
         </FooterWraper>
     )
