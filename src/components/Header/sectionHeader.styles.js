@@ -69,6 +69,7 @@ export const GetStartedButton = styled.button`
     background-color: hsl(180, 66%, 49%);
     color: white;
     font-weight: 700;
+    cursor: pointer;
     @media (min-width: 376px) and (max-width: 992px){ 
        margin-bottom: 10%;
 

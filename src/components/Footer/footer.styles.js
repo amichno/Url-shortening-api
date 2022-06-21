@@ -32,6 +32,10 @@ export const LinksListItem = styled.li`
     font-weight: ${props => props.isFirst? 700:"normal"};
     padding-bottom: ${props => props.isFirst? "1rem":"0.5rem"};
     font-size: 0.8rem;
+    cursor: pointer;
+    &:hover{
+        color: hsl(180, 66%, 49%);
+    }
 `;
 
 export const Social = styled.div`
@@ -39,4 +43,25 @@ export const Social = styled.div`
     display: flex;
     justify-content: space-around;
     padding-right:10%;
+    .LightBlueOnHover{
+        fill: #FFFFFF;
+        cursor: pointer;
+        :hover{
+            fill: #00FFFF; 
+            color: red;
+        }
+    }
 `;
+
+export const SMImages = styled.img`
+   width:24px;
+   height: 24px;
+   fill: #FFFFFF;
+   
+   :hover{
+        fill: #00FFFF;
+        cursor: pointer;
+        color: green;
+   }
+`;
+
