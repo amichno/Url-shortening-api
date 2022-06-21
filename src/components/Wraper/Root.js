@@ -9,23 +9,30 @@ import { Wraper } from "./root.styles";
 import SectionAdvantages from "../SectionAdvantages/sectionAdvantages.component";
 import Footer from "../Footer/footer.component";
 import BoostLinks from "../BoostLinks/boostLinks.component";
+import { useEffect, useState } from "react";
 
 
 
-class Root extends React.Component{
-    render(){
+const Root = () =>
+{
+        const [inputField, setInputField] = useState('');
+        const [links, setLinksList] = useState([]);
+        const [PleaseAddLink, showPleaseAddLink] = useState('false');
+    
         return(
             <Wraper>
                 <Menu />
                 <SectionHeader caption={caption}/>
-                <SectionUrl />
+                <SectionUrl showHidePleaseAddLink={PleaseAddLink}/>
                 <SectionDescription description={description}/>   
                 <SectionAdvantages />
                 <BoostLinks />
                 <Footer />
             </Wraper>
         )
-    }
+    
+
+        
 
 }
 

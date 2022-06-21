@@ -19,14 +19,15 @@ export const UrlWrapper = styled.div`
     &::after{
         content: "Please add a link";
         font-style:italic;
-        color: red;
+        color: hsl(0, 87%, 67%);
         font-size: 0.6rem;
         width: 30%;
         height: 1rem;
         z-index: 25;
         position: relative;
-        left: -30%;
+        left: -29%;
         top: -10%;
+        display: ${props => props.isShown? 'block':'none'};
      }
     
 `;
@@ -41,10 +42,10 @@ export const Input = styled.input`
     font-weight: 700;
     color: hsl(257, 7%, 63%);
     margin: 0.25rem auto;
-    border: 0px;
+    border: 2px solid transparent;
     &:focus{
         outline: none;
-        //border: 2px solid red;
+        border: 2px solid hsl(0, 87%, 67%);
     }
     
 `;
@@ -65,5 +66,6 @@ export const ButtonShorten = styled.button`
     border: none;
     margin: 0.25rem auto;
     font-weight: 700;
+    cursor: pointer;
 `;
 

@@ -32,6 +32,10 @@ export const LinksListItem = styled.li`
     font-weight: ${props => props.isFirst? 700:"normal"};
     padding-bottom: ${props => props.isFirst? "1rem":"0.5rem"};
     font-size: 0.8rem;
+    cursor: pointer;
+    &:hover{
+        color: hsl(180, 66%, 49%);
+    }
 `;
 
 export const Social = styled.div`

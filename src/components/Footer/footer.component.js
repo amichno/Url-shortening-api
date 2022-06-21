@@ -22,23 +22,24 @@ const Footer = () =>{
             </LinksWraper> 
             <LinksWraper>
             <LinksList>
-                    <LinksListItem isFirst={true}>Features</LinksListItem>
-                    <LinksListItem>Link Shortening</LinksListItem>
-                    <LinksListItem>Branded Links</LinksListItem>
-                    <LinksListItem>Analytics</LinksListItem>
+                    <LinksListItem isFirst={true}>Resources</LinksListItem>
+                    <LinksListItem>Blog</LinksListItem>
+                    <LinksListItem>Developers</LinksListItem>
+                    <LinksListItem>Support</LinksListItem>
                </LinksList>
             </LinksWraper> 
             <LinksWraper>
                 <LinksList>
-                        <LinksListItem isFirst={true}>Features</LinksListItem>
-                        <LinksListItem>Link Shortening</LinksListItem>
-                        <LinksListItem>Branded Links</LinksListItem>
-                        <LinksListItem>Analytics</LinksListItem>
+                        <LinksListItem isFirst={true}>Company</LinksListItem>
+                        <LinksListItem>About</LinksListItem>
+                        <LinksListItem>Our Team</LinksListItem>
+                        <LinksListItem>Careers</LinksListItem>
+                        <LinksListItem>Contact</LinksListItem>
                 </LinksList> 
             </LinksWraper> 
             <Social>
-                <LogoFacebook   alt="logo Facebook"/>
-                <SMImages fill="#FFFFFF" src={TwitterPath}></SMImages>
+                <LogoFacebook  className="LightBlueOnHover" alt="logo Facebook"/>
+                <SMImages className="LightBlueOnHover" src={TwitterPath}></SMImages>
                 <LogoPinterest   className="LightBlueOnHover" alt ="Logo Pinterest" />
                 <LogoInstagram   className="LightBlueOnHover" alt = "logo Instagram"/>
             </Social>
