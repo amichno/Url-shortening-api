@@ -17,13 +17,34 @@ const Root = () =>
 {
         const [inputField, setInputField] = useState('');
         const [links, setLinksList] = useState([]);
-        const [PleaseAddLink, showPleaseAddLink] = useState('false');
+        const [PleaseAddLink, setPleaseAddLink] = useState('Hide');
+        const [ShortLinkPressed, setShortLinkPressed] = useState('false'); 
+
+     const onClickHandler = () =>{
+        //console.log(ShortLinkPressed);
+         if(ShortLinkPressed == true)
+            {
+                
+                return setShortLinkPressed('false')
+            }
+        else
+        {
+          
+            console.log(ShortLinkPressed);
+            return setShortLinkPressed('true')
+        }
+        
+     }
+
+
+
+
     
         return(
             <Wraper>
                 <Menu />
                 <SectionHeader caption={caption}/>
-                <SectionUrl showHidePleaseAddLink={PleaseAddLink}/>
+                <SectionUrl showHidePleaseAddLink={PleaseAddLink} onClick={onClickHandler}/>
                 <SectionDescription description={description}/>   
                 <SectionAdvantages />
                 <BoostLinks />
