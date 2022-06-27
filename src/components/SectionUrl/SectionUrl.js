@@ -8,7 +8,7 @@ const SectionUrl = (props)=>{
     //console.log(showHide);
     return(
         <UrlWrapper className={props.showHidePleaseAddLink}>
-            <Input type="text" placeholder="Shorten a link here..."></Input>
+            <Input type="text" placeholder="Shorten a link here..." onChange={props.onChange}></Input>
             <ButtonShorten onClick={props.onClick}>Shorten It!</ButtonShorten>
         </UrlWrapper>
     )

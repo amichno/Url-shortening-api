@@ -21,30 +21,21 @@ const Root = () =>
         const [ShortLinkPressed, setShortLinkPressed] = useState('false'); 
 
      const onClickHandler = () =>{
-        //console.log(ShortLinkPressed);
-         if(ShortLinkPressed == true)
-            {
-                
-                return setShortLinkPressed('false')
-            }
-        else
-        {
-          
-            console.log(ShortLinkPressed);
-            return setShortLinkPressed('true')
-        }
-        
+        fetch('https://api.shrtco.de/v2/shorten?'+{inputField}).
+            then(response => response.json).then(data => setLinksList(data))
+       // console.log(links);
+       console.log( fetch('https://api.shrtco.de/v2/shorten?${inputField}').then(response => response.json))
      }
 
+     const onSearchChange = (event) =>{
+        setInputField(event.target.value);
+     }
 
-
-
-    
         return(
             <Wraper>
                 <Menu />
                 <SectionHeader caption={caption}/>
-                <SectionUrl showHidePleaseAddLink={PleaseAddLink} onClick={onClickHandler}/>
+                <SectionUrl showHidePleaseAddLink={PleaseAddLink} onClick={onClickHandler} onChange={onSearchChange}/>
                 <SectionDescription description={description}/>   
                 <SectionAdvantages />
                 <BoostLinks />
