@@ -21,10 +21,13 @@ const Root = () =>
         const [ShortLinkPressed, setShortLinkPressed] = useState('false'); 
 
      const onClickHandler = () =>{
-        fetch('https://api.shrtco.de/v2/shorten?'+{inputField}).
-            then(response => response.json).then(data => setLinksList(data))
-       // console.log(links);
-       console.log( fetch('https://api.shrtco.de/v2/shorten?${inputField}').then(response => response.json))
+        fetch(`https://api.shrtco.de/v2/shorten?url=${inputField}`).
+            then(response => response.json()).then( JSONresp =>{
+                    const data = JSON.stringify(JSONresp);
+                    const dataJS = JSON.parse(data);
+                    console.log(dataJS.result.short_link);
+            });
+       
      }
 
      const onSearchChange = (event) =>{
