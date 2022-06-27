@@ -1,34 +1,49 @@
 import styled from "styled-components";
 
 export const UrlWrapper = styled.div`
-    width:80%;
-    height: 7rem;
-    background-color: hsl(255, 11%, 22%);
-    background-image: url("../../images/bg-boost-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    flex-wrap: wrap;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 5;
-    &::after{
-        content: "Please add a link";
-        font-style:italic;
-        color: hsl(0, 87%, 67%);
-        font-size: 0.6rem;
-        width: 30%;
-        height: 1rem;
-        z-index: 25;
-        position: relative;
-        left: -29%;
-        top: -10%;
-        display: ${props => props.isShown? 'block':'none'};
-     }
+                width:80%;
+                height: 7rem;
+                background-color: hsl(255, 11%, 22%);
+                background-image: url("../../images/bg-boost-desktop.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: bottom;
+                flex-wrap: wrap;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 5;
+
+                &.Show::after{
+                    content: "Please add a link";
+                    font-style:italic;
+                    color: hsl(0, 87%, 67%);
+                    font-size: 0.6rem;
+                    width: 30%;
+                    height: 1rem;
+                    z-index: 25;
+                    position: relative;
+                    left: -29%;
+                    top: -10%;
+                    display: block;
+                }
+                &.Hide::after{
+                    content: "Please add a link";
+                    font-style:italic;
+                    color: hsl(0, 87%, 67%);
+                    font-size: 0.6rem;
+                    width: 30%;
+                    height: 1rem;
+                    z-index: 25;
+                    position: relative;
+                    left: -29%;
+                    top: -10%;
+                    display: none;
+                }
+    
     
 `;
 
@@ -44,6 +59,10 @@ export const Input = styled.input`
     margin: 0.25rem auto;
     border: 2px solid transparent;
     &:focus{
+        outline: none;
+        //border: 2px solid hsl(0, 87%, 67%);
+    }
+    &.Show:focus{
         outline: none;
         border: 2px solid hsl(0, 87%, 67%);
     }
