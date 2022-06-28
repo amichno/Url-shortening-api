@@ -25,3 +25,21 @@ export const Desc = styled.div`
     width:50%;
     text-align: center;
 `;
+
+export const SectionList = styled.div`
+    width:100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+`;
+
+export const LinkList = styled.ul`
+    list-style: none;
+    display: inline-block;
+`;
+
+export const LinkListItem = styled.li`
+    
+`;
