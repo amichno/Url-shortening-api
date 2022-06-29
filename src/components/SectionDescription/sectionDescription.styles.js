@@ -37,9 +37,29 @@ export const SectionList = styled.div`
 
 export const LinkList = styled.ul`
     list-style: none;
-    display: inline-block;
+    width: 80%;
+    margin: auto;
+    margin-bottom:1rem;
 `;
 
 export const LinkListItem = styled.li`
-    
+    width:100%;
+    background-color: hsl(0,0%,100%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
 `;
+
+export const Paragraph = styled.p`
+    flex:4;
+    text-align: ${props => props.isRight? 'right':'left'};
+    padding-right: 1rem;
+    color: ${props=>props.isBlue?"hsl(180, 66%, 49%)":"black"}
+`;
+

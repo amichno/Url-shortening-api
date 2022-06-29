@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeader from '../Header/sectionHeader';
 import Menu from "../Menu/menu";
 import SectionUrl from "../SectionUrl/SectionUrl";
@@ -16,20 +16,28 @@ import { useState } from "react";
 const Root = () =>
 {
         const [inputField, setInputField] = useState('');
-        const [links, setLinksList] = useState([]);
-        const [PleaseAddLink, setPleaseAddLink] = useState('Hide');
+        const [shortLink, setLinksList] = useState('');
+        const [pleaseAddLink, setPleaseAddLink] = useState('Hide');
+        const lista = [{"jeden":"short_link"}, {"dwa": "short_link2"}, {"trzy":"short_link3"}];
 
      const onClickHandler = () =>
         {
              fetch(`https://api.shrtco.de/v2/shorten?url=${inputField}`).
-             then(response => response.json()).then( JSONresp =>{
+             then(response => response.json()).
+             then( JSONresp =>{
                     const data = JSON.stringify(JSONresp);
                     const dataJS = JSON.parse(data);
-                    let array = [dataJS.result.short_link, dataJS.result.short_link2, dataJS.result.short_link3];
-                    setLinksList(array)
-                    console.log(links);
-                    });    
-            };
+                    setLinksList(dataJS.result.short_link);
+
+                  });    
+         };
+
+      useEffect(()=>{
+         const tabJson = JSON.stringify(lista);
+         localStorage.setItem("ShortLink", tabJson);
+         console.log( JSON.parse(localStorage.getItem("ShortLink")));
+      }
+      ,[shortLink])
      
 
      const onSearchChange = (event) =>{
@@ -40,8 +48,8 @@ const Root = () =>
             <Wraper>
                 <Menu />
                 <SectionHeader caption={caption}/>
-                <SectionUrl showHidePleaseAddLink={PleaseAddLink} onClick={onClickHandler} onChange={onSearchChange}/>
-                <SectionDescription description={description} linkList = {links}/>   
+                <SectionUrl showHidePleaseAddLink={pleaseAddLink} onClick={onClickHandler} onChange={onSearchChange}/>
+                <SectionDescription description={description} linkList = {shortLink}/>   
                 <SectionAdvantages />
                 <BoostLinks />
                 <Footer />
