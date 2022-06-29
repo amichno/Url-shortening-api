@@ -1,4 +1,5 @@
-import {SectionDes, Title, Desc, SectionList, LinkList, LinkListItem} from './sectionDescription.styles.js';
+import {SectionDes, Title, Desc, SectionList, LinkList, LinkListItem, Paragraph} from './sectionDescription.styles.js';
+import { ButtonShorten } from '../SectionUrl/sectionUrl.styles.js';
 
 
 const SectionDescription = (props) => {
@@ -8,13 +9,11 @@ const SectionDescription = (props) => {
         <SectionDes>
             <SectionList>
               <LinkList>
-                {
-                    props.linkList.map( item =>
-                        <LinkListItem>{item}
-                            <button>Button</button>
-                        </LinkListItem>
-                    )
-                }
+                      <LinkListItem> 
+                            <Paragraph isRight={false} isBlue={false}>Link</Paragraph>
+                            <Paragraph isRight={true} isBlue={true}>short link</Paragraph>
+                          <ButtonShorten isHalf={true}>Copy</ButtonShorten>
+                      </LinkListItem>
               </LinkList>
               
             </SectionList>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const UrlWrapper = styled.div`
                 width:80%;
                 height: 7rem;
+                max-height: 7rem;
                 background-color: hsl(255, 11%, 22%);
                 background-image: url("../../images/bg-boost-desktop.svg");
                 background-repeat: no-repeat;
@@ -60,7 +61,6 @@ export const Input = styled.input`
     border: 2px solid transparent;
     &:focus{
         outline: none;
-        //border: 2px solid hsl(0, 87%, 67%);
     }
     &.Show:focus{
         outline: none;
@@ -75,8 +75,8 @@ export const AddLink = styled.p`
 `;
 
 export const ButtonShorten = styled.button`
-    width: 10rem;
-    height: 3rem;
+    width: ${props => props.isHalf?"5rem":"10rem"};
+    height: ${props => props.isHalf?"2rem":"3rem"};
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
