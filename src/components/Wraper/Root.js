@@ -18,7 +18,8 @@ const Root = () =>
       const [inputField, setInputField] = useState('');
       const linkListFromStorage = localStorage.getItem("Links");
       const [shortLinksList, setLinksList] = useState(linkListFromStorage? JSON.parse(linkListFromStorage) : []);
-      const [keyShortLinkList, setKeyShortLinkList] = useState([]);
+      const keyFromStorage = localStorage.getItem("Keys");
+      const [keyShortLinkList, setKeyShortLinkList] = useState(keyFromStorage? JSON.parse(keyFromStorage):[]);
       const [pleaseAddLink, setPleaseAddLink] = useState('Hide');
 
       const ApiConnection = () =>{
