@@ -26,6 +26,8 @@ export const LinksWraper = styled.div`
 export const LinksList = styled.ol`
     list-style: none;
     display: block;
+    padding-left:0.5rem;
+    padding-right: 0.5rem;
 `;
 
 export const LinksListItem = styled.li`
