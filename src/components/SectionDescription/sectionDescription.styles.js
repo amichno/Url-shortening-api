@@ -9,6 +9,7 @@ export const SectionDes = styled.div`
     align-items: center;
     margin-top: -3.5rem;
     background-color: hsla(0, 0%, 75%, 0.5);
+    max-height: 40rem;
 `;
 
 
@@ -32,7 +33,11 @@ export const SectionList = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
+    max-height: 15rem;
+    overflow-y:auto;
+    margin-top:3rem;
+    margin-bottom: 1.5rem;
+    scrollbar-width: thin;
 `;
 
 export const LinkList = styled.ul`

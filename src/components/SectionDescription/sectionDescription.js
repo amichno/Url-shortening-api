@@ -4,27 +4,26 @@ import { ButtonShorten } from '../SectionUrl/sectionUrl.styles.js';
 
 const SectionDescription = (props) => {
     const descr = props.description[0];
-    const linklist = props.links;
+    const linkList = props.links;
     const keyList = props.keys;
-    
+   
     return(
         <SectionDes>
             <SectionList>
               <LinkList>
-                      <LinkListItem> 
-                            {
-                                linklist.map((value, id)=>{
-                                    <LinkListItem> 
-                                        <Paragraph isRight={false} isBlue={false}>{value}</Paragraph>
-                                        <Paragraph isRight={true} isBlue={true}>{id}</Paragraph>
-                                        <ButtonShorten isHalf={true}>Copy</ButtonShorten>
+                      {
+                                linkList.map((value, id)=>
+                                    <LinkListItem key={id}> 
+                                        <Paragraph isRight={false} isBlue={false}>
+                                          {keyList[id]}
+                                        </Paragraph>
+                                        <Paragraph isRight={true} isBlue={true}>
+                                            {linkList[id]}
+                                        </Paragraph>
+                                        <ButtonShorten isHalf={true}>Copy</ButtonShorten>  
                                     </LinkListItem>
-                                })
+                                )
                             }
-                            <Paragraph isRight={false} isBlue={false}>Link</Paragraph>
-                            <Paragraph isRight={true} isBlue={true}>short link</Paragraph>
-                          <ButtonShorten isHalf={true}>Copy</ButtonShorten>
-                      </LinkListItem>
               </LinkList>
               
             </SectionList>

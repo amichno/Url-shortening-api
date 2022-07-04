@@ -17,6 +17,7 @@ export const UrlWrapper = styled.div`
                 justify-content: center;
                 align-items: center;
                 z-index: 5;
+                position: relative;
 
                 &.Show::after{
                     content: "Please add a link";
@@ -26,9 +27,11 @@ export const UrlWrapper = styled.div`
                     width: 30%;
                     height: 1rem;
                     z-index: 25;
-                    position: relative;
-                    left: -29%;
-                    top: -10%;
+                    position: absolute;
+                    //left: -29%;
+                    //top: -10%;
+                    bottom:5%;
+                    left: 5%;
                     display: block;
                 }
                 &.Hide::after{
@@ -62,7 +65,7 @@ export const Input = styled.input`
     &:focus{
         outline: none;
     }
-    &.Show:focus{
+    &.Show{
         outline: none;
         border: 2px solid hsl(0, 87%, 67%);
     }
