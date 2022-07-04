@@ -20,7 +20,7 @@ const Root = () =>
       const [shortLinksList, setLinksList] = useState(linkListFromStorage? JSON.parse(linkListFromStorage) : []);
       const keyFromStorage = localStorage.getItem("Keys");
       const [keyShortLinkList, setKeyShortLinkList] = useState(keyFromStorage? JSON.parse(keyFromStorage):[]);
-      const [pleaseAddLink, setPleaseAddLink] = useState('Hide');
+      const [pleaseAddLink, setPleaseAddLink] = useState("Hide");
 
       const ApiConnection = () =>{
          fetch(`https://api.shrtco.de/v2/shorten?url=${inputField}`).
@@ -33,10 +33,22 @@ const Root = () =>
             }); 
       }
 
+      const CheckInput = () =>{
+         if (inputField === "")
+            return false
+         else  
+            return true;
+      }
+
      const onClickHandler = () =>
         {
+           if(CheckInput())
+           {
+              setPleaseAddLink("Hide");
               ApiConnection(); 
-             // GetFromLocalStorage(); 
+           }
+            else  
+               setPleaseAddLink("Show"); 
         };
 
       const ArrayToString =(array)=>{
@@ -47,26 +59,20 @@ const Root = () =>
          localStorage.setItem(storageName, ArrayToString(array) );
       }
 
-      const StringToJSON = ()=>{
-      }
-
       const GetFromLocalStorage = (storageName, array, id) =>{
          const data = localStorage.getItem(storageName);
          const dataJS = JSON.parse(data);
-         //console.log(dataJS[id]);
          return dataJS[id];
       }
 
       useEffect(()=>{  
             SaveToLocalStorage("Links",shortLinksList);
             SaveToLocalStorage("Keys", keyShortLinkList);
-            /*const test = (localStorage.getItem("Links"));
-            const test2 = JSON.parse(test);
-            console.log(test2[0]);*/
          }
       ,[shortLinksList, keyShortLinkList]);    
 
      const onSearchChange = (event) =>{
+        setPleaseAddLink("Hide");
         setInputField(event.target.value);
      }
 
