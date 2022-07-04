@@ -16,28 +16,64 @@ import { useState } from "react";
 const Root = () =>
 {
         const [inputField, setInputField] = useState('');
-        const [shortLink, setLinksList] = useState('');
+        const [shortLinksList, setLinksList] = useState([]);
+        const [keyShortLinkList, setKeyShortLinkList] = useState([]);
         const [pleaseAddLink, setPleaseAddLink] = useState('Hide');
-        const lista = [{"jeden":"short_link"}, {"dwa": "short_link2"}, {"trzy":"short_link3"}];
+        const lista = [{"cokolwiek.pl":"short_link"}, {"ktokolwiek": "short_link2"}, {"gdziekolwiek":"short_link3"}];
+        const listaKluczy = ["wp.pl", "cos.pl", "gdziekolwiek"];
+
+
+      const ApiConnection = () =>{
+         fetch(`https://api.shrtco.de/v2/shorten?url=${inputField}`).
+         then(response => response.json()).
+         then( JSONresp =>{
+               const data = JSON.stringify(JSONresp);
+               const dataJS = JSON.parse(data);
+              // let linklist = {[inputField] : dataJS.result.short_link};
+               //const keyList = inputField;
+               setKeyShortLinkList(prevKeyList => [...prevKeyList, [inputField]]);
+               setLinksList(prevLinkList =>[...prevLinkList, [dataJS.result.short_link]]);
+            }); 
+      }
 
      const onClickHandler = () =>
         {
-             fetch(`https://api.shrtco.de/v2/shorten?url=${inputField}`).
-             then(response => response.json()).
-             then( JSONresp =>{
-                    const data = JSON.stringify(JSONresp);
-                    const dataJS = JSON.parse(data);
-                    setLinksList(dataJS.result.short_link);
+              ApiConnection(); 
+              GetFromLocalStorage(); 
+        };
 
-                  });    
-         };
-
-      useEffect(()=>{
-         const tabJson = JSON.stringify(lista);
-         localStorage.setItem("ShortLink", tabJson);
-         console.log( JSON.parse(localStorage.getItem("ShortLink")));
+      const ArrayToString =(array)=>{
+         return JSON.stringify(array);
       }
-      ,[shortLink])
+      
+      const SaveToLocalStorage = (storageName, array)=>{
+         localStorage.setItem(storageName, ArrayToString(array) );
+      }
+
+      const StringToJSON = ()=>{
+
+      }
+
+      const GetFromLocalStorage = (storageName, array, id) =>{
+         const data = localStorage.getItem(storageName);
+        if(data !== null) {
+         const dataJS = JSON.parse(data);
+         return dataJS[id];}
+      }
+
+      useEffect(()=>{  
+            SaveToLocalStorage("Links",shortLinksList);
+            SaveToLocalStorage("Keys", keyShortLinkList);
+            /*const test = (localStorage.getItem("Links"));
+            const test2 = JSON.parse(test);
+            console.log(test2[0]);*/
+         }
+      ,[shortLinksList, keyShortLinkList]);
+
+
+      /*useEffect(()=>{
+            SaveToLocalStorage("Keys", keyShortLinkList);
+      },[keyShortLinkList]);*/
      
 
      const onSearchChange = (event) =>{
@@ -49,7 +85,7 @@ const Root = () =>
                 <Menu />
                 <SectionHeader caption={caption}/>
                 <SectionUrl showHidePleaseAddLink={pleaseAddLink} onClick={onClickHandler} onChange={onSearchChange}/>
-                <SectionDescription description={description} linkList = {shortLink}/>   
+                <SectionDescription description={description} links={shortLinksList} keys={setKeyShortLinkList} getFromStorage={GetFromLocalStorage}/>   
                 <SectionAdvantages />
                 <BoostLinks />
                 <Footer />
