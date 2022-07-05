@@ -1,6 +1,6 @@
 import {SectionDes, Title, Desc, SectionList, LinkList, LinkListItem, Paragraph} from './sectionDescription.styles.js';
 import { ButtonShorten } from '../SectionUrl/sectionUrl.styles.js';
-
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 const SectionDescription = (props) => {
     const descr = props.description[0];
@@ -20,7 +20,9 @@ const SectionDescription = (props) => {
                                         <Paragraph isRight={true} isBlue={true}>
                                             {linkList[id]}
                                         </Paragraph>
-                                        <ButtonShorten isHalf={true}>Copy</ButtonShorten>  
+                                        <CopyToClipboard text={linkList[id]}>
+                                             <ButtonShorten isHalf={true}>Copy</ButtonShorten>  
+                                        </CopyToClipboard>
                                     </LinkListItem>
                                 )
                             }

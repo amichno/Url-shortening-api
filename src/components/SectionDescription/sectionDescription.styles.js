@@ -38,6 +38,17 @@ export const SectionList = styled.div`
     margin-top:3rem;
     margin-bottom: 1.5rem;
     scrollbar-width: thin;
+            ::-webkit-scrollbar {
+            width: 5px;
+            }
+            ::-webkit-scrollbar-track {
+            background: transparent;
+            }
+            ::-webkit-scrollbar-thumb {
+            background-color: rgba(155, 155, 155, 0.5);
+            border-radius: 20px;
+            border: transparent;
+            }
 `;
 
 export const LinkList = styled.ul`
@@ -59,6 +70,8 @@ export const LinkListItem = styled.li`
     display: flex;
     align-content: space-between;
     align-items: center;
+    box-shadow: 0px 2px 10px hsla(220, 16%, 50%, 0.5);
+    margin-left: 0.5%;
 `;
 
 export const Paragraph = styled.p`
