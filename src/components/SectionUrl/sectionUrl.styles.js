@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const UrlWrapper = styled.div`
                 width:80%;
                 height: 7rem;
-                max-height: 7rem;
+                max-height: 7.2rem;
                 background-color: hsl(255, 11%, 22%);
                 background-image: url("../../images/bg-boost-desktop.svg");
                 background-repeat: no-repeat;
@@ -28,11 +28,19 @@ export const UrlWrapper = styled.div`
                     height: 1rem;
                     z-index: 25;
                     position: absolute;
-                    //left: -29%;
-                    //top: -10%;
                     bottom:5%;
                     left: 5%;
                     display: block;
+                    @media (max-width: 375px ){
+                            bottom:40%;
+                            left:20%;
+                            width: 80%;
+                        }
+                        @media (min-width: 375px) and (max-width: 992px){
+                            bottom:40%;
+                            left:20%;
+                            width:80%;
+                        }
                 }
                 &.Hide::after{
                     content: "Please add a link";
@@ -47,6 +55,14 @@ export const UrlWrapper = styled.div`
                     top: -10%;
                     display: none;
                 }
+    @media (max-width: 375px ){
+        width: 90%;
+        height: 100%;
+    }
+    @media (min-width: 375px) and (max-width: 992px){
+        width: 90%;
+        height: 100%;
+    }
     
     
 `;
@@ -69,7 +85,12 @@ export const Input = styled.input`
         outline: none;
         border: 2px solid hsl(0, 87%, 67%);
     }
-    
+    @media (max-width: 375px ){
+        width: 90%;
+    }
+    @media (min-width: 375px) and (max-width: 992px){
+        width: 90%;
+    }
 `;
 
 export const AddLink = styled.p`
@@ -91,6 +112,12 @@ export const ButtonShorten = styled.button`
     cursor: pointer;
     &:hover{
         background-color: hsla(180, 66%, 49%, 0.5);
+    }
+    @media (max-width: 375px ){
+       margin-top: 0.5rem;
+    }
+    @media (min-width: 375px) and (max-width: 992px){
+        margin-top: 0.5rem;
     }
 `;
 

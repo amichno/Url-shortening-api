@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const SectionDes = styled.div`
     width: 100%;
-    height: 25rem;
+    min-height: 25rem;
+    max-height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,8 +17,11 @@ export const SectionDes = styled.div`
 export const Title = styled.div`
     font-size: 2rem;
     font-weight: 700;
-    height: fit-content;
-    color: ${props => props.isWhite? "hsl(0,0%,100%)": "hsl(100%, 0, 0)"}
+    min-height: 3rem;
+    color: ${props => props.isWhite? "hsl(0,0%,100%)": "hsl(100%, 0, 0)"};
+    max-height: 8rem;
+    text-align: center;
+
 `;
 
 export const Desc = styled.div`
@@ -78,6 +82,7 @@ export const Paragraph = styled.p`
     flex:4;
     text-align: ${props => props.isRight? 'right':'left'};
     padding-right: 1rem;
-    color: ${props=>props.isBlue?"hsl(180, 66%, 49%)":"black"}
+    color: ${props=>props.isBlue?"hsl(180, 66%, 49%)":"black"};
+    overflow: auto;
 `;
 
