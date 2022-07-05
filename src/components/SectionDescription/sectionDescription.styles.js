@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const SectionDes = styled.div`
     width: 100%;
-    height: 25rem;
+    min-height: 25rem;
+    max-height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,8 +17,11 @@ export const SectionDes = styled.div`
 export const Title = styled.div`
     font-size: 2rem;
     font-weight: 700;
-    height: fit-content;
-    color: ${props => props.isWhite? "hsl(0,0%,100%)": "hsl(100%, 0, 0)"}
+    min-height: 3rem;
+    color: ${props => props.isWhite? "hsl(0,0%,100%)": "hsl(100%, 0, 0)"};
+    max-height: 8rem;
+    text-align: center;
+
 `;
 
 export const Desc = styled.div`
@@ -38,6 +42,17 @@ export const SectionList = styled.div`
     margin-top:3rem;
     margin-bottom: 1.5rem;
     scrollbar-width: thin;
+            ::-webkit-scrollbar {
+            width: 5px;
+            }
+            ::-webkit-scrollbar-track {
+            background: transparent;
+            }
+            ::-webkit-scrollbar-thumb {
+            background-color: rgba(155, 155, 155, 0.5);
+            border-radius: 20px;
+            border: transparent;
+            }
 `;
 
 export const LinkList = styled.ul`
@@ -59,12 +74,15 @@ export const LinkListItem = styled.li`
     display: flex;
     align-content: space-between;
     align-items: center;
+    box-shadow: 0px 2px 10px hsla(220, 16%, 50%, 0.5);
+    margin-left: 0.5%;
 `;
 
 export const Paragraph = styled.p`
     flex:4;
     text-align: ${props => props.isRight? 'right':'left'};
     padding-right: 1rem;
-    color: ${props=>props.isBlue?"hsl(180, 66%, 49%)":"black"}
+    color: ${props=>props.isBlue?"hsl(180, 66%, 49%)":"black"};
+    overflow: auto;
 `;
 
