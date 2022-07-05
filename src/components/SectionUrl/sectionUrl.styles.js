@@ -83,11 +83,14 @@ export const ButtonShorten = styled.button`
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    background-color: hsl(180, 66%, 49%);
+    background-color: ${props=> props.isDark?"hsl(255, 11%, 22%)":"hsl(180, 66%, 49%)"};
     color:white;
     border: none;
     margin: 0.25rem auto;
     font-weight: 700;
     cursor: pointer;
+    &:hover{
+        background-color: hsla(180, 66%, 49%, 0.5);
+    }
 `;
 

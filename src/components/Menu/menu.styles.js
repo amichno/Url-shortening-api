@@ -46,5 +46,8 @@ export const SignIn = styled.div`
     color: white;
     padding: 0.5rem 0.5rem;
     cursor: pointer;
+    &:hover{
+        background-color: hsla(180, 66%, 49%, 0.5);
+    }
 `;
 

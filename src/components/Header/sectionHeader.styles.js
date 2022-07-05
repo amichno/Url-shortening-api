@@ -74,6 +74,9 @@ export const GetStartedButton = styled.button`
        margin-bottom: 10%;
 
     }
+    &:hover{
+        background-color: hsla(180, 66%, 49%, 0.5);
+    }
 `;
 
 export const Banner = styled.div`
