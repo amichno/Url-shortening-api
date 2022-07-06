@@ -76,6 +76,11 @@ export const LinkListItem = styled.li`
     align-items: center;
     box-shadow: 0px 2px 10px hsla(220, 16%, 50%, 0.5);
     margin-left: 0.5%;
+    @media (max-width: 650px) {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
 `;
 
 export const Paragraph = styled.p`

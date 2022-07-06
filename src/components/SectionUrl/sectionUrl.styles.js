@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const UrlWrapper = styled.div`
                 width:80%;
                 height: 7rem;
-                max-height: 7.2rem;
+                max-height: 7.9rem;
                 background-color: hsl(255, 11%, 22%);
                 background-image: url("../../images/bg-boost-desktop.svg");
                 background-repeat: no-repeat;
@@ -32,13 +32,13 @@ export const UrlWrapper = styled.div`
                     left: 5%;
                     display: block;
                     @media (max-width: 375px ){
-                            bottom:40%;
-                            left:20%;
+                            bottom:42%;
+                            left:5%;
                             width: 80%;
                         }
                         @media (min-width: 375px) and (max-width: 992px){
-                            bottom:40%;
-                            left:20%;
+                            bottom:42%;
+                            left:5%;
                             width:80%;
                         }
                 }
@@ -54,14 +54,18 @@ export const UrlWrapper = styled.div`
                     left: -29%;
                     top: -10%;
                     display: none;
+                    
                 }
     @media (max-width: 375px ){
         width: 90%;
         height: 100%;
+        padding-bottom: 0.3rem;
     }
     @media (min-width: 375px) and (max-width: 992px){
         width: 90%;
         height: 100%;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
     }
     
     
@@ -113,11 +117,15 @@ export const ButtonShorten = styled.button`
     &:hover{
         background-color: hsla(180, 66%, 49%, 0.5);
     }
-    @media (max-width: 375px ){
-       margin-top: 0.5rem;
+    @media (max-width: 670px ){
+       width:90%;
+       margin-top: 0.6rem;
     }
-    @media (min-width: 375px) and (max-width: 992px){
+    @media (min-width: 670px) and (max-width: 992px){
         margin-top: 0.5rem;
+        //width:90%;
+       // margin-bottom: 0.6rem;
+
     }
 `;
 
