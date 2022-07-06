@@ -38,6 +38,10 @@ export const Adv = styled.div`
            width: 60%;
            height: 60%;
         }
+        @media screen and (max-width: 900px) {
+            margin-left:45%;
+            
+        }
     }
     .TextAdv{
         padding: 2rem 2rem;
@@ -48,4 +52,10 @@ export const Adv = styled.div`
         padding-top: 2rem;
         overflow: auto;
     }
+
+    @media screen and (max-width: 620px) {
+            text-align:center;
+            
+        }
+    
 `;

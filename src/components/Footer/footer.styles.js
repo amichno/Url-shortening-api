@@ -6,21 +6,31 @@ export const FooterWraper = styled.div`
     display: flex;
     justify-content: center;
     background-color: hsl(266, 10%, 14%);
-    //align-items: center;
     padding: 2rem 2rem;
     flex-wrap: wrap;
+    @media screen and (max-width: 900px){
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const FooterLogo = styled.div`
     flex:2;
     height: 100%;
     padding-left: 10%;
+    @media screen and (max-width: 900px){
+        padding-left: 0px;
+    }
 `;
 
 
 export const LinksWraper = styled.div`
     color: white;
     flex:1;
+    @media (max-width: 900px) {
+        width: 100%;
+        text-align: center; 
+    }
 `;
 
 export const LinksList = styled.ol`
@@ -28,6 +38,7 @@ export const LinksList = styled.ol`
     display: block;
     padding-left:0.5rem;
     padding-right: 0.5rem;
+    
 `;
 
 export const LinksListItem = styled.li`
@@ -52,6 +63,13 @@ export const Social = styled.div`
             fill: #00FFFF; 
             color: red;
         }
+    }
+
+    @media (max-width: 900px) {
+        width: 60%;
+        text-align: center; 
+        padding-right: 0;
+        margin-top: 1rem;
     }
 `;
 

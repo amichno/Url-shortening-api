@@ -9,16 +9,12 @@ export const Header = styled.div`
     align-items: center;
     flex-wrap: wrap-reverse;
     max-height: fit-content;
-   /* @media (max-width: 376px ){
-        display: flex;
-        flex-direction: column-reverse;
-        height: fit-content;
-        justify-content: center;
+    @media (max-width: 376px ){
+        padding-bottom: 1rem;
     }
     @media (min-width: 376px) and (max-width: 992px){
-        flex-direction: column-reverse;
-
-    }*/
+        padding-bottom: 1rem;
+    }
 `;
 
 export const HeaderText = styled.div`
@@ -47,16 +43,11 @@ export const Caption = styled.p`
 `;
 
 export const Text = styled.p`
-    font-size: 1.5vw;
     height: 5rem;
     width: 100%;
     padding-right: 3rem;
     min-height: fit-content;
     color:hsl(257, 27%, 26%);
-    @media (min-width: 376px) and (max-width: 992px){
-        font-size: 2vw;
-        
-    }
 `;
 
 export const GetStartedButton = styled.button`
