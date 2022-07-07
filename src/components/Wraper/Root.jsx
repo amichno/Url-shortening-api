@@ -11,9 +11,6 @@ import Footer from "../Footer/footer.component";
 import BoostLinks from "../BoostLinks/boostLinks.component";
 import { useState } from "react";
 
-
-
-
 const Root = () =>
 {
       const [inputField, setInputField] = useState('');
@@ -81,6 +78,7 @@ const Root = () =>
         return(
             <Wraper>
                 <Menu />
+               
                 <SectionHeader caption={caption}/>
                 <SectionUrl 
                      showHidePleaseAddLink={pleaseAddLink} 

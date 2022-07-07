@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-export const MenuList = styled.ul`
-   align-items: flex-start;
-`;
 
-export const MenuItem = styled.li`
-    list-style: none;
-    display: inline-block;
-    margin-left: 1rem;
-    margin-right: 1rem;
+export const SectionMenu = styled.div`
+    width:100%;
+    display: flex;
+    margin-top: 1rem;
     color: hsl(257, 27%, 26%);
+    align-items: baseline;
 `;
 
 export const Logo = styled.div`
@@ -23,17 +20,34 @@ export const Logo = styled.div`
     padding-left: 1rem;
 `;
 
-export const SectionMenu = styled.div`
-    width:100%;
-    display: flex;
-    margin-top: 1rem;
-    color: hsl(257, 27%, 26%);
-    align-items: baseline;
+export const MenuList = styled.ul`
+   align-items: flex-start;
+
 `;
+
+export const MenuItem = styled.li`
+    list-style: none;
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: hsl(257, 27%, 26%);
+    @media (max-width:680px)
+    {
+        display: none;
+    }
+`;
+
+
+
 
 export const Login = styled.div`
     width: 5rem;
     margin-left: auto;
+    @media (max-width:680px)
+    {
+        display: none;
+    }
+    
 `;
 
 export const SignIn = styled.div`
@@ -48,6 +62,10 @@ export const SignIn = styled.div`
     cursor: pointer;
     &:hover{
         background-color: hsla(180, 66%, 49%, 0.5);
+    }
+    @media (max-width:680px)
+    {
+        display: none;
     }
 `;
 

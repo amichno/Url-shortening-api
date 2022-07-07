@@ -33,7 +33,7 @@ export const LinksWraper = styled.div`
     }
 `;
 
-export const LinksList = styled.ol`
+export const LinksList = styled.ul`
     list-style: none;
     display: block;
     padding-left:0.5rem;

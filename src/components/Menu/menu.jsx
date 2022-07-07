@@ -1,5 +1,6 @@
 import { menu } from "../../Data/menu";
-import {SectionMenu, Logo, MenuList, MenuItem, Login, SignIn} from "./menu.styles"
+import {SectionMenu, Logo, MenuList, MenuItem, Login, SignIn} from "./menu.styles";
+import BurgerMenu from "../BurgerMenu/burgerMenu";
 
 
 const Menu = () =>{
@@ -12,6 +13,7 @@ const Menu = () =>{
             </MenuList>
             <Login>Login</Login>
             <SignIn>Sign in</SignIn>
+            <BurgerMenu />
         </SectionMenu>
     )
 
