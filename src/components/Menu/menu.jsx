@@ -1,6 +1,7 @@
 import { menu } from "../../Data/menu";
-import {SectionMenu, Logo, MenuList, MenuItem, Login, SignIn} from "./menu.styles";
+import {SectionMenu, Logo, MenuList, MenuItem, Login, SignIn, WraperMenu} from "./menu.styles";
 import BurgerMenu from "../BurgerMenu/burgerMenu";
+
 
 
 const Menu = () =>{
@@ -8,12 +9,15 @@ const Menu = () =>{
     return(
         <SectionMenu>
             <Logo></Logo>
-            <MenuList>
-                {menu.map((item,id) =><MenuItem key={id}>{item}</MenuItem>)}
-            </MenuList>
-            <Login>Login</Login>
-            <SignIn>Sign in</SignIn>
-            <BurgerMenu />
+            <WraperMenu>
+                <MenuList>
+                    {menu.map((item,id) =><MenuItem key={id} isLogin={false}>{item}</MenuItem>)}
+                </MenuList>
+                <Login>Login</Login>
+                <SignIn>Sign Up</SignIn>
+             </WraperMenu>
+           
+           
         </SectionMenu>
     )
 

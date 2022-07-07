@@ -14,8 +14,11 @@ export const BurgerWraper = styled.div`
 export const MobileMenu =styled.div`
     width: 80vw;
     height: 80vh;
-    background-color: pink;
+    background-color: hsl(257, 27%, 26%);
     position: absolute;
     right: 10%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 
 `;
