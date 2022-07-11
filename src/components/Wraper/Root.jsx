@@ -22,14 +22,11 @@ const Root = () =>
       const [showMobileMenu, setMobileMenu] = useState("none");
 
       const MobileMenu =()=>{
-        (showMobileMenu === "none")?setMobileMenu("flex"):setMobileMenu("none");
-       console.log(showMobileMenu);
-       
+        (showMobileMenu === "none")?setMobileMenu("flex"):setMobileMenu("none");      
       }
 
       const CheckWindowSize = ()=>{
-         if(window.innerWidth>620)
-          setMobileMenu("flex");
+         window.innerWidth>620?setMobileMenu("flex"):setMobileMenu("none");
       };
 
       useEffect(()=>{
