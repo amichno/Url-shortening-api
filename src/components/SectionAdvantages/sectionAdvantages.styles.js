@@ -21,7 +21,6 @@ export const Adv = styled.div`
     position: relative;
     max-height: fit-content;
     
-    
     .Icon{
         background-color: hsl(255, 11%, 22%) ;
         z-index: 5;
@@ -39,7 +38,7 @@ export const Adv = styled.div`
            height: 60%;
         }
         @media screen and (max-width: 900px) {
-            margin-left:45%;
+           margin-left: 40%;
             
         }
     }

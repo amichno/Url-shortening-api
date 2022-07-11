@@ -11,9 +11,6 @@ import Footer from "../Footer/footer.component";
 import BoostLinks from "../BoostLinks/boostLinks.component";
 import { useState } from "react";
 
-
-
-
 const Root = () =>
 {
       const [inputField, setInputField] = useState('');
@@ -22,6 +19,22 @@ const Root = () =>
       const keyFromStorage = localStorage.getItem("Keys");
       const [keyShortLinkList, setKeyShortLinkList] = useState(keyFromStorage? JSON.parse(keyFromStorage):[]);
       const [pleaseAddLink, setPleaseAddLink] = useState("Hide");
+      const [showMobileMenu, setMobileMenu] = useState("none");
+
+      const MobileMenu =()=>{
+        (showMobileMenu === "none")?setMobileMenu("flex"):setMobileMenu("none");
+       console.log(showMobileMenu);
+       
+      }
+
+      const CheckWindowSize = ()=>{
+         if(window.innerWidth>620)
+          setMobileMenu("flex");
+      };
+
+      useEffect(()=>{
+         window.addEventListener("resize", CheckWindowSize)
+      });
 
       const ApiConnection = () =>{
          fetch(`https://api.shrtco.de/v2/shorten?url=${inputField}`).
@@ -80,7 +93,8 @@ const Root = () =>
 
         return(
             <Wraper>
-                <Menu />
+                <Menu onClick={MobileMenu} showMobileMenu={showMobileMenu}/>
+               
                 <SectionHeader caption={caption}/>
                 <SectionUrl 
                      showHidePleaseAddLink={pleaseAddLink} 
