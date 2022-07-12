@@ -15,5 +15,5 @@ This app short your too long www adress. App is full responsive. I have decided 
 
 ## Live Site Url
 
-[Here you can see how it works](https://velvety-druid-8048ad.netlify.app/)
+[Here you can see how it works](https://jocular-cat-4274a0.netlify.app/)
 
