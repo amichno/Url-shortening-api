@@ -56,8 +56,8 @@ export const Social = styled.div`
     display: flex;
     justify-content: space-around;
     padding-right:10%;
-    .LightBlueOnHover{
-        fill: #FFFFFF;
+    svg{
+        fill: white;
         cursor: pointer;
         :hover{
             fill: #00FFFF; 
