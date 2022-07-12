@@ -19,7 +19,7 @@ const Root = () =>
       const keyFromStorage = localStorage.getItem("Keys");
       const [keyShortLinkList, setKeyShortLinkList] = useState(keyFromStorage? JSON.parse(keyFromStorage):[]);
       const [pleaseAddLink, setPleaseAddLink] = useState("Hide");
-      const [showMobileMenu, setMobileMenu] = useState("none");
+      const [showMobileMenu, setMobileMenu] = useState("flex");
 
       const MobileMenu =()=>{
         (showMobileMenu === "none")?setMobileMenu("flex"):setMobileMenu("none");      

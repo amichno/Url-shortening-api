@@ -4,7 +4,6 @@ import {ReactComponent as LogoFacebook} from "../../images/icon-facebook.svg";
 import {ReactComponent as LogoTwitter} from "../../images/icon-twitter.svg";
 import {ReactComponent as LogoPinterest} from "../../images/icon-pinterest.svg";
 import {ReactComponent as LogoInstagram} from "../../images/icon-instagram.svg";
-import TwitterPath from "../../images/icon-twitter.svg";
 
 const Footer = () =>{
     return(
@@ -38,9 +37,9 @@ const Footer = () =>{
                 </LinksList> 
             </LinksWraper> 
             <Social>
-                <LogoFacebook  className="LightBlueOnHover" alt="logo Facebook"/>
-                <SMImages className="LightBlueOnHover" src={TwitterPath}></SMImages>
-                <LogoPinterest   className="LightBlueOnHover" alt ="Logo Pinterest" />
+                <LogoFacebook alt="logo Facebook"/>
+                <LogoTwitter alt="logo Twitter" />
+                <LogoPinterest alt ="Logo Pinterest" />
                 <LogoInstagram   className="LightBlueOnHover" alt = "logo Instagram"/>
             </Social>
         </FooterWraper>

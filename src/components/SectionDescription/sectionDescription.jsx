@@ -4,7 +4,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { useState } from 'react';
 
 const SectionDescription = (props) => {
-    const [isCopied, setIsCopied] = useState('');
+    const [isCopied, setIsCopied] = useState('false');
 
     const descr = props.description[0];
     const linkList = props.links;
