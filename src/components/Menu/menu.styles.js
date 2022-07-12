@@ -28,9 +28,6 @@ export const WraperMenu = styled.div`
     @media (max-width:620px)
     {
         color: white;
-        //display: flex;
-        //transform:translateX(0);
-        //transition: transform 0.3 ease;
         flex-direction: column;
         z-index: 1000;
         width: 90%;
