@@ -4,7 +4,7 @@ export const UrlWrapper = styled.div`
                 width:80%;
                 height: 7rem;
                 max-height: 7.9rem;
-                background-color: hsl(255, 11%, 22%);
+                background-color: ${({theme}) =>theme.colors.VeryDarkViolet};
                 background-image: url("../../images/bg-boost-desktop.svg");
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -31,7 +31,7 @@ export const UrlWrapper = styled.div`
                     bottom:5%;
                     left: 5%;
                     display: block;
-                    @media (max-width: 375px ){
+                    @media (max-width: ${({theme})=> theme.mediaQueries.xs} ){
                             bottom:42%;
                             left:5%;
                             width: 80%;

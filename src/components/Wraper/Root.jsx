@@ -11,6 +11,7 @@ import Footer from "../Footer/footer.component";
 import BoostLinks from "../BoostLinks/boostLinks.component";
 import { useState } from "react";
 
+
 const Root = () =>
 {
       const [inputField, setInputField] = useState('');
@@ -89,6 +90,7 @@ const Root = () =>
      }
 
         return(
+
             <Wraper>
                 <Menu onClick={MobileMenu} showMobileMenu={showMobileMenu}/>
                
@@ -106,6 +108,7 @@ const Root = () =>
                 <BoostLinks />
                 <Footer />
             </Wraper>
+         
         )
 }
 
