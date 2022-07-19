@@ -9,7 +9,7 @@ const Footer = () =>{
     return(
         <FooterWraper>
             <FooterLogo>
-                 <LogoShortly fill="#FFFFFF" alt="Logo"/>
+                 <LogoShortly fill="#FFFFFF" aria-labelledby="Logo"/>
             </FooterLogo>
             <LinksWraper>
                <LinksList>
@@ -37,10 +37,10 @@ const Footer = () =>{
                 </LinksList> 
             </LinksWraper> 
             <Social>
-                <LogoFacebook alt="logo Facebook"/>
-                <LogoTwitter alt="logo Twitter" />
-                <LogoPinterest alt ="Logo Pinterest" />
-                <LogoInstagram   className="LightBlueOnHover" alt = "logo Instagram"/>
+                <LogoFacebook aria-labelledby="logo Facebook"/>
+                <LogoTwitter aria-labelledby="logo Twitter" />
+                <LogoPinterest aria-labelledby ="Logo Pinterest" />
+                <LogoInstagram   aria-labelledby="LightBlueOnHover" alt = "logo Instagram"/>
             </Social>
         </FooterWraper>
     )

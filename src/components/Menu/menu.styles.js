@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionMenu = styled.div`
     width:100%;
-    min-width: 375px;
+    min-width: ${({theme})=> theme.mediaQueries };
     display: flex;
     margin-top: 1rem;
     color: hsl(257, 27%, 26%);
