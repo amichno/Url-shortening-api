@@ -22,7 +22,7 @@ export const UrlWrapper = styled.div`
                 &.Show::after{
                     content: "Please add a link";
                     font-style:italic;
-                    color: hsl(0, 87%, 67%);
+                    color: ${({theme}) => theme.colors.Red} ;
                     font-size: 0.6rem;
                     width: 30%;
                     height: 1rem;
@@ -36,7 +36,7 @@ export const UrlWrapper = styled.div`
                             left:5%;
                             width: 80%;
                         }
-                        @media (min-width: 375px) and (max-width: 992px){
+                        @media (min-width: ${({theme})=> theme.mediaQueries.xs}) and (max-width: ${({theme})=> theme.mediaQueries.m}){
                             bottom:42%;
                             left:5%;
                             width:80%;
@@ -45,7 +45,7 @@ export const UrlWrapper = styled.div`
                 &.Hide::after{
                     content: "Please add a link";
                     font-style:italic;
-                    color: hsl(0, 87%, 67%);
+                    color: ${({theme}) => theme.colors.Red} ;
                     font-size: 0.6rem;
                     width: 30%;
                     height: 1rem;
@@ -56,12 +56,12 @@ export const UrlWrapper = styled.div`
                     display: none;
                     
                 }
-    @media (max-width: 375px ){
+    @media (max-width: ${({theme})=> theme.mediaQueries.xs} ){
         width: 90%;
         height: 100%;
         padding-bottom: 0.3rem;
     }
-    @media (min-width: 375px) and (max-width: 992px){
+    @media (min-width: ${({theme})=> theme.mediaQueries.xs}) and (max-width: ${({theme})=> theme.mediaQueries.m}){
         width: 90%;
         height: 100%;
         padding-top: 0.3rem;
@@ -79,7 +79,7 @@ export const Input = styled.input`
     -moz-border-radius: 5px;
     border-radius: 5px;
     font-weight: 700;
-    color: hsl(257, 7%, 63%);
+    color: ${({theme}) => theme.colors.Gray};
     margin: 0.25rem auto;
     border: 2px solid transparent;
     &:focus{
@@ -87,12 +87,12 @@ export const Input = styled.input`
     }
     &.Show{
         outline: none;
-        border: 2px solid hsl(0, 87%, 67%);
+        border: 2px solid ${({theme}) => theme.colors.Red} ;
     }
-    @media (max-width: 375px ){
+    @media (max-width: ${({theme}) => theme.mediaQueries.xs} ){
         width: 90%;
     }
-    @media (min-width: 375px) and (max-width: 992px){
+    @media (min-width: ${({theme}) => theme.mediaQueries.xs} ) and (max-width: ${({theme}) => theme.mediaQueries.m} ){
         width: 90%;
     }
 `;
@@ -117,15 +117,12 @@ export const ButtonShorten = styled.button`
     &:hover{
         background-color: hsla(180, 66%, 49%, 0.5);
     }
-    @media (max-width: 670px ){
+    @media (max-width: ${({theme})=> theme.mediaQueries.s}){
        width:90%;
        margin-top: 0.6rem;
     }
-    @media (min-width: 670px) and (max-width: 992px){
+    @media (min-width: ${({theme})=> theme.mediaQueries.s}) and (max-width: ${({theme})=> theme.mediaQueries.m}){
         margin-top: 0.5rem;
-        //width:90%;
-       // margin-bottom: 0.6rem;
-
     }
 `;
 
