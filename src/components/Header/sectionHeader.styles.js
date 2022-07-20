@@ -80,7 +80,7 @@ export const Banner = styled.div`
         height:50%; 
     }
 
-    @media (min-width: 376px) and (max-width: 992px){
+    @media (min-width: 375px) and (max-width: 992px){
        flex-direction: column-reverse;
        width:100%;
        height:50%; 

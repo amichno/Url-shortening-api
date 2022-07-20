@@ -3,7 +3,7 @@ import { createGlobalStyle} from "styled-components";
 export const GlobalStyles = createGlobalStyle`
     
     *{
-        font: 'Poppins';
+        font-family: 'Poppins';
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -15,6 +15,6 @@ export const GlobalStyles = createGlobalStyle`
         display: flex;
         justify-content: center;
         box-sizing: border-box;
-        min-width: 375px;
+        min-width:375px;
     }
 `
